@@ -86,7 +86,7 @@ body, html {
 
 <!-- Container (About Section) -->
 <div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">ABOUT</h3>
+  <h3 class="w3-center w3-wide">ABOUT</h3>
   <p>Glory is a Sydney-based association that helps to run local skateboarding
   events for the community. Our aim is to provide aspiration to the youth while
   encouraging respect, discipline and fun.</p>
@@ -112,7 +112,7 @@ body, html {
 <!-- Second Parallax Image with Events Text -->
 <div class="bgimg-2 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">EVENTS</span>
+    <img style="border:10px solid black; width: 90%;" src="./images/eventcaption.png" />
   </div>
 </div>
 
@@ -155,7 +155,7 @@ body, html {
 <!-- Third Parallax Image with Portfolio Text -->
 <div class="bgimg-3 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+     <img style="border:10px solid black; width: 90%;" src="./images/contactcaption.png" />
   </div>
 </div>
 
@@ -222,10 +222,12 @@ function onClick(element) {
 }
 
 // Change style of navbar on scroll
+var navBarScrollTop = 10;
 window.onscroll = function() {myFunction()};
 function myFunction() {
     var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    if (document.body.scrollTop > navBarScrollTop ||
+        document.documentElement.scrollTop > navBarScrollTop) {
         navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
     } else {
         navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
